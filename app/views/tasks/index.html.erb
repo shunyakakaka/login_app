@@ -1,0 +1,11 @@
+<% if flash[:notice] %>
+  <div class="ui success message ui center aligned header">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<h1>TODOアプリ</h1>
+<% if logged_in? %>
+  <%= render "tasks/logged_in" %>
+<% else %>
+  <%= render "tasks/not_logged_in" %>
+<% end %>
